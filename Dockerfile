@@ -1,12 +1,10 @@
-FROM node:argon
+FROM node:6.3.0
 
-RUN mkdir -p /src/app
-WORKDIR /src/app
-
-COPY package.json /src/app/
+COPY package.json /src/
+WORKDIR /src/
 RUN npm install
 
-COPY . /usr/src/app
+COPY . /src/
 
 EXPOSE 8080
-CMD [ "npm", "start" ]
+ENTRYPOINT [ "npm", "start" ]
