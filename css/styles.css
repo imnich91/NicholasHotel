@@ -1,0 +1,121 @@
+.app { padding-bottom: 200px }
+.app .example { max-width: 450px }
+
+.AcctCard{
+  width: 300px;
+  margin-top: 20px;
+}
+
+.app{
+  padding-bottom: 0px;
+}
+
+.login-container{
+  height: 100vh;
+  padding-bottom: 10px;
+}
+
+.JobsCard{
+  width: 300px;
+  margin-top: 20px;
+}
+.card{
+  border-style: solid;
+  border-color: #2975e9;
+  border-width: 1px;
+  width: 300px;
+  margin-right: 0px;
+  height: 176px;
+}
+
+.accounts{
+  color: white;
+  height: 1px;
+  font-size: 15px;
+  float: right;
+  clear: right;
+  padding-right: 5px;
+  padding-top: 10px;
+}
+
+.jobs{
+  color: white;
+  height: 1px;
+  font-size: 15px;
+  float: right;
+  clear: right;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.card-block {
+  background-color: #2975e9;
+}
+.icon-account{
+  font-size: 64px;
+  color: white;
+  padding-left: 10px;
+}
+
+.dashboard-row{
+  width: 1000px;
+}
+
+.dashboard-col{
+  padding: 0px;
+  width: 0px;
+}
+
+.icon-plus{
+  vertical-align: middle;
+}
+
+.icon-queue-settings{
+  font-size: 64px;
+  color: white;
+  padding-left: 10px;
+}
+
+.icon-chevron-right{
+  font-size: 10px;
+  color: blue;
+}
+
+.acct-button{
+  padding-left: 0px;
+  padding-right: 0px;
+  float: left;
+}
+
+.details-button{
+  float: right;
+  padding-right: 0px;
+}
+
+.card-numbers{
+  font-size: 48px;
+  color: white;
+  float: right;
+  height: 50px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+.dash-header-pad{
+  padding-left: 0px;
+  margin-bottom: 10px;
+  font-weight:100;
+}
+.dash-header{
+  width: 966px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-color: #f7f5f4;
+  border-style: solid;
+  border-width: 2px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  padding-left: 0px;
+  color: #7b7a7a;
+}
