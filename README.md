@@ -1,6 +1,5 @@
-# coreui-starter-react
+# Forte UI
 
-Core UI examples - React
 
 ## Setup
 
