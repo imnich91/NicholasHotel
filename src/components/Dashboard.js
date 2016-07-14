@@ -4,22 +4,20 @@ import JobsCard from '../components/JobsCard';
 
 const Dashboard = () => (
   <div className = "Dashboard">
-    <div className = "row dash-header">
-      <div className = "col-xs-12 dash-header-pad">
-        <h1>
-          Dashboard
-        </h1>
+    <div className = "row card-padding">
+      <div className = "col-lg-9">
+        <h1 className = "dashboard-header">Dashboard</h1>
       </div>
     </div>
-    <div className = "row dashboard-row">
-      <div className = "col-xs-4 dashboard-col">
+    <div className = "row card-padding">
+      <div className = "col-xl-3 col-lg-12 col-md-12 col-sm-12 dashboard-col">
         <AcctCard/>
       </div>
-      <div className = "col-xs-4 dashboard-col">
-        <JobsCard/>
+      <div className = "col-xl-3 col-lg-12 col-md-12 col-sm-12 dashboard-col">
+        <JobsCard status = {"REGISTERED"}/>
       </div>
-      <div className = "col-xs-4 dashboard-col">
-        <JobsCard/>
+      <div className = "col-xl-3 col-lg-12 col-md-12 col-sm-12 dashboard-col">
+        <JobsCard status = {"STARTED"}/>
       </div>
     </div>
   </div>

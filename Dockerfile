@@ -1,7 +1,8 @@
-FROM node:6.3.0
+FROM node:4.4.7
 
 COPY package.json /src/
 WORKDIR /src/
+RUN npm install npm -g
 RUN npm install
 
 COPY . /src/

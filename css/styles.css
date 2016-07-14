@@ -1,41 +1,152 @@
-.app { padding-bottom: 200px }
-.app .example { max-width: 450px }
+@media (max-width: 550px) {
+    .navbar-vertical {
+        display:none !important;
+    }
+    .app{
+      margin-left: 0px !important;
+    }
+}
+@media (max-width: 425px){
+  .nav-row{
+    margin: 0px !important;
+  }
+}
+
+.wrapper{
+  min-width: 400px !important;
+}
+
+.app {
+  min-height: 970px;
+  margin: 0px 0px 0px 250px;
+  padding: 0px 30px;
+  background-color: white;
+}
+
+.account-card-width{
+  width: 0px;
+}
 
 .AcctCard{
-  width: 300px;
   margin-top: 20px;
-}
-
-.app{
-  padding-bottom: 0px;
-}
-
-.login-container{
-  height: 100vh;
-  padding-bottom: 10px;
-}
-
-.JobsCard{
-  width: 300px;
-  margin-top: 20px;
-}
-.card{
-  border-style: solid;
-  border-color: #2975e9;
-  border-width: 1px;
-  width: 300px;
-  margin-right: 0px;
-  height: 176px;
 }
 
 .accounts{
   color: white;
-  height: 1px;
   font-size: 15px;
   float: right;
   clear: right;
-  padding-right: 5px;
-  padding-top: 10px;
+  margin-top: 12px;
+  height: 0px;
+  padding-right: 20px;
+}
+
+.account-button {
+  float:left;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+body{
+  overflow: hidden;
+}
+
+.card{
+  border-style: solid;
+  border-color: #2975e9;
+  border-width: 1px;
+  margin-right: 0px;
+  min-width: 255px;
+  max-width: 500px;
+}
+
+.card-block {
+  background-color: #2975e9;
+  padding-bottom: 20px;
+  max-height: 210px;
+  padding-right: 0px;
+}
+
+.card-numbers{
+  font-size: 50px;
+  color: white;
+  float: right;
+  height: 50px;
+  padding-right: 30px;
+  padding-top: 5px;
+}
+
+
+.dashboard-header{
+    color: #7b7a7a;
+    border-style: solid;
+    border-color: #f7f5f4;
+    border-width: 0px 0px 2px 0px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-weight: 500;
+
+}
+
+.default-dropdown{
+  float:right;
+  font-size: 30px;
+}
+
+.details-button{
+  float:right;
+  vertical-align: middle;
+  padding: 0px;
+  width: 80px;
+}
+
+.dropdown{
+  float:right;
+}
+
+.dropdown-menu{
+  margin-top: 50px;
+  background-color: #072249;
+}
+
+.float-left{
+  float: left;
+}
+
+.icon-chevron-down{
+  padding-top: 5px;
+  float:right;
+  font-size: 20px;
+}
+
+.icon-account-card{
+  font-size: 60px;
+  color: white;
+  padding-left: 10px;
+  height: 80px;
+  padding-bottom: 10px;
+}
+
+.icon-account-nav{
+  font-size: 1px;
+  color: #2975e9;
+}
+
+.icon-chevron-right{
+  font-size: 10px;
+  color: #2975e9;
+}
+
+.icon-plus{
+  vertical-align: middle;
+}
+
+.icon-queue-settings{
+  font-size: 60px;
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  height: 80px;
 }
 
 .jobs{
@@ -44,78 +155,90 @@
   font-size: 15px;
   float: right;
   clear: right;
-  padding-right: 20px;
-  padding-top: 10px;
+  padding-right: 35px;
+  margin-top: 12px;
 }
 
-.card-block {
-  background-color: #2975e9;
-}
-.icon-account{
-  font-size: 64px;
-  color: white;
-  padding-left: 10px;
-}
-
-.dashboard-row{
-  width: 1000px;
-}
-
-.dashboard-col{
-  padding: 0px;
-  width: 0px;
-}
-
-.icon-plus{
-  vertical-align: middle;
-}
-
-.icon-queue-settings{
-  font-size: 64px;
-  color: white;
-  padding-left: 10px;
-}
-
-.icon-chevron-right{
-  font-size: 10px;
-  color: blue;
-}
-
-.acct-button{
-  padding-left: 0px;
-  padding-right: 0px;
-  float: left;
-}
-
-.details-button{
-  float: right;
-  padding-right: 0px;
-}
-
-.card-numbers{
-  font-size: 48px;
-  color: white;
-  float: right;
-  height: 50px;
-  padding-right: 15px;
-  padding-top: 5px;
-}
-
-.dash-header-pad{
-  padding-left: 0px;
-  margin-bottom: 10px;
-  font-weight:100;
-}
-.dash-header{
-  width: 966px;
+.JobsCard{
   margin-top: 20px;
-  margin-bottom: 10px;
-  border-color: #f7f5f4;
+}
+
+.logout{
+  color: yellow;
+}
+
+.navbar{
+  z-index: 1000;
+  min-width: 50px;
+  background-color: #f7f5f4;
+  height: 50px;
   border-style: solid;
-  border-width: 2px;
-  border-top: 0px;
-  border-right: 0px;
-  border-left: 0px;
-  padding-left: 0px;
+  border-width: 0px 0px 2px 0px;
+  border-color: #e7e7e7;
+}
+
+.nav-sidebar{
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: #e7e7e7;
+}
+
+
+.nav-wrapper{
+  width: 100%;
+}
+
+.nav-header{
+  margin-left: 15px;
+  float: left;
   color: #7b7a7a;
+  font-size: 25px;
+  vertical-align: middle;
+  margin-top: 7px;
+}
+
+.navbar-vertical-link-title.active{
+  color:#3ed6cf;
+}
+
+.navbar-vertical-link-title{
+  font-size: 15px;
+  color: #2975e9;
+}
+
+.navbar-vertical{
+  overflow: hidden;
+  margin-top: 50px;
+  width: 250px;
+}
+
+.nav-row{
+  margin-right: 70px;
+}
+
+.pad-dropdown{
+
+}
+
+.page-wrapper{
+  margin: 0px 250px 0px 250px;
+  background-color: white;
+}
+
+.status-label{
+  font-size: 12px;
+  float:right;
+  clear:right;
+  background-color: #072249;
+  color: white;
+  margin-top: 18px;
+  height: 20px;
+  margin-bottom: -20px;
+  width: 100px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.wrapper{
+  background-color: #f7f5f4;
 }
