@@ -1,12 +1,36 @@
-@media (max-width: 550px) {
-    .navbar-vertical {
-        display:none !important;
-    }
-    .app{
-      margin-left: 0px !important;
-    }
+@media (max-width: 480px) {
+  .hide-dash{
+    display: none;
+  }
+  .default-dropdown{
+    display: none !important;
+  }
+  .navbar-vertical {
+      width: 0% !important;
+  }
+
+  .nav-header{
+    margin-top: 15px !important;
+    font-size: 15px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .off-canvas-open{
+    display:block !important;
+
+  }
+  .app{
+    margin-left: 0px !important;
+  }
 }
-@media (max-width: 425px){
+
+@media (min-width: 480px){
+  .off-canvas{
+    display:none !important;
+  }
+}
+
+@media (max-width: 480px){
   .nav-row{
     margin: 0px !important;
   }
@@ -23,15 +47,11 @@
   background-color: white;
 }
 
-.account-card-width{
+.card-width{
   width: 0px;
 }
 
-.AcctCard{
-  margin-top: 20px;
-}
-
-.accounts{
+.Accounts{
   color: white;
   font-size: 15px;
   float: right;
@@ -58,6 +78,7 @@ body{
   margin-right: 0px;
   min-width: 255px;
   max-width: 500px;
+  margin-top: 20px;
 }
 
 .card-block {
@@ -109,8 +130,17 @@ body{
   background-color: #072249;
 }
 
+.exit-style{
+  color: black;
+  font-size: 40px;
+}
+
 .float-left{
   float: left;
+}
+
+.handle{
+  display: none;
 }
 
 .icon-chevron-down{
@@ -149,7 +179,7 @@ body{
   height: 80px;
 }
 
-.jobs{
+.Jobs{
   color: white;
   height: 1px;
   font-size: 15px;
@@ -159,12 +189,36 @@ body{
   margin-top: 12px;
 }
 
-.JobsCard{
-  margin-top: 20px;
-}
-
 .logout{
   color: yellow;
+}
+
+.login-container{
+  min-height: 1000px;
+}
+
+.modal-body{
+  padding-bottom: 15px;
+}
+
+.modal-body-pad{
+  padding-bottom: 20px;
+  margin-right: 10px;
+}
+
+.modal-body-title{
+  color: #339e99;
+}
+
+.modal-header{
+  color: #7b7a7a;
+  padding-bottom: 10px !important;
+}
+
+.nav-menu-icon{
+  margin-top: 10px;
+  color: #2975e9;
+  font-size: 30px;
 }
 
 .navbar{
@@ -216,6 +270,13 @@ body{
   margin-right: 70px;
 }
 
+.off-canvas-open{
+  display:none;
+  margin: 0px;
+  width: 0px;
+  padding: 0px;
+}
+
 .pad-dropdown{
 
 }
@@ -225,6 +286,15 @@ body{
   background-color: white;
 }
 
+.path-style{
+  fill: #2975e9;
+  opacity: .5;
+}
+
+.polygon-style{
+  fill: #2975e9;
+}
+
 .status-label{
   font-size: 12px;
   float:right;
@@ -232,11 +302,18 @@ body{
   background-color: #072249;
   color: white;
   margin-top: 18px;
-  height: 20px;
+  height: 19px;
   margin-bottom: -20px;
   width: 100px;
   text-align: center;
   padding-top: 2px;
+}
+
+#hideVis{
+  visibility: hidden;
+}
+#makeVis{
+  visibility:visible;
 }
 
 .wrapper{

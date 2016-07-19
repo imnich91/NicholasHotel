@@ -1,9 +1,15 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
+import MenuItems from '../components/MenuItems';
+
+
 const Navbar = () =>(
   <div>
     <nav className = "navbar">
       <div className = "row nav-row">
+        <Button className="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
+          <span className="icon icon-menu nav-menu-icon"></span>
+        </Button>
         <div className = "col-xs-6 col-sm-6 col-md-9 col-lg-9">
           <div className = "nav-header">Forte Admin</div>
         </div>
@@ -20,19 +26,16 @@ const Navbar = () =>(
         </div>
       </div>
     </nav>
+    <aside className="off-canvas off-canvas-left" id="off-canvas-demo">
+      <nav className = "sidebar-nav">
+        <Button className="off-canvas-close" data-toggle="off-canvas" data-target="#off-canvas-demo">
+          <span className="icon icon-close"></span>
+        </Button>
+        <MenuItems/>
+      </nav>
+    </aside>
     <nav className = "navbar-vertical">
-      <a className = "navbar-vertical-link active" href= "http://localhost:8080/">
-        <span className = "navbar-vertical-link-title active">Dashboard</span>
-      </a>
-      <a className = "navbar-vertical-link">
-        <span className = "navbar-vertical-link-title">Accounts</span>
-      </a>
-      <a className = "navbar-vertical-link">
-        <span className = "navbar-vertical-link-title">Jobs</span>
-      </a>
-      <a className = "navbar-vertical-link">
-        <span className = "navbar-vertical-link-title">Schedule</span>
-      </a>
+      <MenuItems/>
     </nav>
   </div>
 )
