@@ -8,6 +8,11 @@
   .navbar-vertical {
       width: 0% !important;
   }
+  .modal-body-pad{
+    padding-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
 
   .nav-header{
     margin-top: 15px !important;
@@ -189,6 +194,7 @@ body{
   margin-top: 12px;
 }
 
+
 .logout{
   color: yellow;
 }
@@ -198,12 +204,13 @@ body{
 }
 
 .modal-body{
-  padding-bottom: 15px;
+  padding: 0px;
 }
 
 .modal-body-pad{
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   margin-right: 10px;
+  margin-left: 20px;
 }
 
 .modal-body-title{
@@ -213,6 +220,15 @@ body{
 .modal-header{
   color: #7b7a7a;
   padding-bottom: 10px !important;
+  padding-left: 35px !important;
+}
+
+.modal-header-style{
+  clear: both;
+}
+
+.modal-side-pad{
+  padding: 0px 15px 0px 15px;
 }
 
 .nav-menu-icon{
@@ -295,6 +311,15 @@ body{
   fill: #2975e9;
 }
 
+.provision-message{
+  margin-right: 5px !important;
+}
+
+.select-data-size{
+  border-style: none !important;
+  max-height: 120px;
+}
+
 .status-label{
   font-size: 12px;
   float:right;
@@ -307,6 +332,10 @@ body{
   width: 100px;
   text-align: center;
   padding-top: 2px;
+}
+
+.text-bottom{
+  vertical-align: bottom;
 }
 
 #hideVis{

@@ -4,11 +4,15 @@ const AppContainer = (process.env.NODE_ENV === 'development') ?
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const rootEl = document.getElementById('root');
 ReactDOM.render(
   <AppContainer>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </AppContainer>,
   rootEl
 );

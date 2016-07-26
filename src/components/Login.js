@@ -4,13 +4,11 @@ import Button from 'coreui/lib/components/Button';
 import Label from 'coreui/lib/components/Label';
 import yup from 'yup';
 
-const personSchema = yup.object({
-  name: yup.object({
-    first: yup.string().default('').required('Please enter a first name'),
-    last: yup.string().default('').required('Please enter a last name'),
-  }),
-  dateOfBirth: yup.date().max(new Date(), 'Are you a time traveler?'),
-  colorId: yup.number().nullable().required('Please select a color'),
+const defaultRequiredStr = yup.string().default('').required('This field is required');
+const schema = yup.object({
+  password: defaultRequiredStr,
+  rememberme: yup.bool().default(false),
+  username: defaultRequiredStr
 });
 
 const Login = () => (
@@ -21,20 +19,22 @@ const Login = () => (
         <polygon className = "polygon-style" points="22.69 43.13 22.69 76.87 51.93 93.79 81.17 76.87 81.17 43.13 51.93 26.21 22.69 43.13"/>
       </svg>
       <h1 className = "login-brand-name">Nexxus Marketing</h1>
-      <Form autoComplete = "off" defaultValue={personSchema.default()}
-      onSubmit={(v) => console.log(v)}
-      schema={personSchema}>
+      <Form {...{ schema }}
+            defaultValue={schema.default()}
+            onSubmit={() => authenticate(true)}>
         <div className = "form-group">
           <Label className = "control-label">
             <span className = "sr-only">Username</span>
             <input className = "form-control input-lg" type="username" name="username" id="login-username" placeholder="Username" spellcheck="false"></input>
           </Label>
+          <Message for="username" />
         </div>
         <div className = "form-group">
           <Label className = "control-label">
             <span className = "sr-only">Password</span>
             <input className = "form-control input-lg" type="password" name="password" id="login-password" placeholder="Password"></input>
           </Label>
+          <Message for="password" />
         </div>
         <div className = "form-group">
           <div className = "checkbox pull-xs-left">

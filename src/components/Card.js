@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
-import ModalExample from '../examples/ModalExample';
-import AcctModal from "../components/AcctModal";
+import CreateAcct from "../components/CreateAcct";
 
 class Card extends React.Component {
   constructor(props) {
@@ -13,10 +12,6 @@ class Card extends React.Component {
       visible: props.acctVisible,
       icon: this.setCard()
     };
-  }
-
-  handleClick = function(){
-    console.log("HI");
   }
 
   setCard = function(){
@@ -31,7 +26,7 @@ class Card extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className = "col-xl-3 col-lg-12 col-md-12 col-sm-12 dashboard-col">
         <div className="card">
           <div className="card-block">
             <div className = "row">
@@ -49,7 +44,7 @@ class Card extends React.Component {
           <div className="card-footer">
             <div className = "row">
               <div className = "col-xs-6 account-button">
-                <AcctModal style = "btn-link account-button" visible = {this.state.visible}/>
+                <CreateAcct style = "btn-link account-button" visible = {this.state.visible}/>
               </div>
               <div className = "col-xs-6 details-button">
                 <Button className="btn-link details-button">
