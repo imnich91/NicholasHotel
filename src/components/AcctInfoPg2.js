@@ -20,7 +20,7 @@ class AcctInfoPg2 extends React.Component{
 
   render = () => (
     <Modal onHide={()=> this.props.action(this.props.data)}>
-      <div class="modal-content">
+      <div className="modal-content">
         <div className = "modal-header">
           <Button className="close inverse" data-dismiss="modal" aria-label="Close" onClick = {()=> this.props.action(this.props.data)}>
             <span className = "icon icon-close exit-style"></span>
@@ -31,39 +31,32 @@ class AcctInfoPg2 extends React.Component{
         <div className = "modal-side-pad" id = "ModalOne">
           <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="region">Database Product</Label>
+              <Label className="modal-body-title required" htmlFor="region">Database Product</Label>
               <DropdownListInput disabled defaultValue="Nexxus Marketing"/>
             </div>
-            <div classname = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="environment">Database Type</Label>
+            <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
+              <Label className="modal-body-title required" htmlFor="environment">Database Type</Label>
               <DropdownListInput data={['prod', 'development']} placeholder= "Select account type"/>
             </div>
           </div>
           <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="acct-name">SQL IP</Label>
+              <Label className="modal-body-title required" htmlFor="acct-name">SQL IP</Label>
               <input className="form-control" id="acct-name" type="text" placeholder = "ie: 1.1.0.1.145"></input>
             </div>
-            <div classname = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="admin-eamil">SQL Port</Label>
+            <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
+              <Label className="modal-body-title required" htmlFor="admin-eamil">SQL Port</Label>
               <input className="form-control" id="admin-email" type="text" placeholder = "ie: 3306"></input>
             </div>
           </div>
           <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="acct-name">Database Username</Label>
+              <Label className="modal-body-title required" htmlFor="acct-name">Database Username</Label>
               <input className="form-control" id="acct-name" type="text" placeholder = "Type username"></input>
             </div>
-            <div classname = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="admin-eamil">Database Password</Label>
-              <input className="form-control" id="admin-email" type="text" placeholder = "Type password"></input>
-            </div>
-          </div>
-          <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="admin-eamil">Database Size</Label>
-              <SelectListInput className = "select-data-size" data={['Small < 500 MB', 'Medium 501 MB - 49 GB', 'Large > 50 GB']} defaultValue="Medium" />
-              <Button className = "btn btn-link">Check database size</Button>
+              <Label className="modal-body-title required" htmlFor="admin-eamil">Database Password</Label>
+              <input className="form-control" id="admin-email" type="text" placeholder = "Type password"></input>
             </div>
           </div>
         </div>

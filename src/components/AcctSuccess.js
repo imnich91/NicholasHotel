@@ -16,7 +16,7 @@ class AcctSuccess extends React.Component{
   )
   render = () => (
     <Modal onHide={()=> this.props.action(this.props.data)}>
-      <div class="modal-content">
+      <div className="modal-content">
         <div className = "modal-header">
           <Button className="close inverse" data-dismiss="modal" aria-label="Close" onClick = {()=> this.props.action(this.props.data)}>
             <span className = "icon icon-close exit-style"></span>

@@ -1,6 +1,13 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import CreateAcct from "../components/CreateAcct";
+import {fetchAPI} from '../Actions';
+import {fetchAccts} from '../Actions';
+import {fetchRegisteredJobs} from '../Actions';
+import {fetchStartedJobs} from '../Actions';
+import {fetchSchedule} from '../Actions';
+
+
 
 class Card extends React.Component {
   constructor(props) {
@@ -23,6 +30,7 @@ class Card extends React.Component {
       return "icon icon-queue-settings"
     }
   }
+
 
   render(){
     return(
@@ -47,7 +55,7 @@ class Card extends React.Component {
                 <CreateAcct style = "btn-link account-button" visible = {this.state.visible}/>
               </div>
               <div className = "col-xs-6 details-button">
-                <Button className="btn-link details-button">
+                <Button className="btn-link details-button" onClick = { fetchSchedule }>
                   Details
                   <span className="icon icon-chevron-right"></span>
                 </Button>

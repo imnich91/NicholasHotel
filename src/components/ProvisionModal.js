@@ -5,7 +5,7 @@ import Modal from 'coreui/lib/components/Modal';
 
 export const ProvisionModal = (props) => (
   <Modal onHide={()=> props.action(props.data)}>
-    <div class="modal-content">
+    <div className="modal-content">
       <div className = "modal-header">
         <Button className="close inverse" data-dismiss="modal" aria-label="Close" onClick = {()=> props.action(props.data)}>
           <span className = "icon icon-close exit-style"></span>

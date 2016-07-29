@@ -21,7 +21,7 @@ class AccountInfoPg1 extends React.Component{
 
   render = () => (
     <Modal onHide={()=> this.props.action(this.props.data)}>
-      <div class="modal-content">
+      <div className="modal-content">
         <div className = "modal-header">
           <Button className="close inverse" data-dismiss="modal" aria-label="Close" onClick = {()=> this.props.action(this.props.data)}>
             <span className = "icon icon-close exit-style"></span>
@@ -32,21 +32,21 @@ class AccountInfoPg1 extends React.Component{
         <div className = "modal-side-pad" id = "ModalOne">
           <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="acct-name">Full name</Label>
+              <Label className="modal-body-title required" htmlFor="acct-name">Full name</Label>
               <input className="form-control" id="acct-name" type="text" placeholder = "Type account name here"></input>
             </div>
-            <div classname = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="admin-eamil">Admin Email Address</Label>
+            <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
+              <Label className="modal-body-title required" htmlFor="admin-eamil">Admin Email Address</Label>
               <input className="form-control" id="admin-email" type="text" placeholder = "email@domain.com"></input>
             </div>
           </div>
           <div className = "row">
             <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="region">Region</Label>
+              <Label className="modal-body-title required" htmlFor="region">Region</Label>
               <DropdownListInput disabled defaultValue="United States"/>
             </div>
-            <div classname = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
-              <Label className="modal-body-title required" for="environment">Environment</Label>
+            <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
+              <Label className="modal-body-title required" htmlFor="environment">Environment</Label>
               <DropdownListInput data={['prod', 'development']} placeholder= "Choose your environment"/>
             </div>
           </div>
