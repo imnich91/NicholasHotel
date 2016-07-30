@@ -11,7 +11,7 @@ const schema = yup.object({
   username: defaultRequiredStr
 });
 
-const Login = () => (
+const Login = ({authenticate} = props) => (
   <div className="login-container bg-gradient">
     <div className="login">
       <svg className ="login-brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103.86 120">
@@ -25,15 +25,22 @@ const Login = () => (
         <div className = "form-group">
           <Label className = "control-label">
             <span className = "sr-only">Username</span>
-            <input className = "form-control input-lg" type="username" name="username" id="login-username" placeholder="Username" spellcheck="false"></input>
+            <Field
+              id="username"
+              name="username"
+              placeholder="Username"
+            />
           </Label>
           <Message for="username" />
         </div>
         <div className = "form-group">
           <Label className = "control-label">
             <span className = "sr-only">Password</span>
-            <input className = "form-control input-lg" type="password" name="password" id="login-password" placeholder="Password"></input>
-          </Label>
+            <Field
+              id="password"
+              name="password"
+              placeholder="Password"
+            />          </Label>
           <Message for="password" />
         </div>
         <div className = "form-group">

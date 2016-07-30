@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link, IndexLink } from 'react-router';
 
 const MenuItems = () =>(
   <div>
-    <a className = "navbar-vertical-link active" href= "http://localhost:8080/">
-      <span className = "navbar-vertical-link-title active">Dashboard</span>
-    </a>
-    <a className = "navbar-vertical-link">
+    <IndexLink className = "navbar-vertical-link" activeClassName = 'active' to='/dashboard'>
+      <span className = "navbar-vertical-link-title">Dashboard</span>
+    </IndexLink>
+    <Link className = "navbar-vertical-link" activeClassName = 'active' to='accounts'>
       <span className = "navbar-vertical-link-title">Accounts</span>
-    </a>
-    <a className = "navbar-vertical-link">
+    </Link>
+    <Link className = "navbar-vertical-link" activeClassName = 'active' to='jobs'>
       <span className = "navbar-vertical-link-title">Jobs</span>
-    </a>
-    <a className = "navbar-vertical-link">
+    </Link>
+    <Link className = "navbar-vertical-link" activeClassName = 'active' to='schedule'>
       <span className = "navbar-vertical-link-title">Schedule</span>
-    </a>
+    </Link>
   </div>
 )
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import {connect} from 'react-redux';
 import Modal from 'coreui/lib/components/Modal';
-import { displayAcct4 } from '../Actions';
+import { displayAcct4 } from '../../Actions';
 
 class AcctSuccess extends React.Component{
 

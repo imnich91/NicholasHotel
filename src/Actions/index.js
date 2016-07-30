@@ -2,6 +2,7 @@ export const ACCT_1 = 'ACCT_1';
 export const ACCT_2 = 'ACCT_2';
 export const ACCT_3 = 'ACCT_3';
 export const ACCT_4 = 'ACCT_4';
+export const CHANGE_AUTH = 'CHANGE_AUTH';
 
 
 const api_key = "c395f0d1";
@@ -28,6 +29,11 @@ export const displayAcct4 = (state) => ({
   payload: !state
 });
 
+export const authenticate = (isLoggedIn) => ({
+  type: CHANGE_AUTH,
+  payload: isLoggedIn
+})
+
 export const finishedRequest = (actionType,response) => ({
     type: actionType,
     payload: response
@@ -51,7 +57,7 @@ export function fetchAccts(){
 }
 
 export function fetchSchedule(){
-  //return function(dispatch){
+  return function(dispatch){
     return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/schedule/`,{
       headers: {
         'Content-Type': 'application/json',
@@ -62,14 +68,14 @@ export function fetchSchedule(){
       return response.json()
     })
     .then(function(value){
-       //dispatch(finishedRequest("fetchAccts", value))
+       dispatch(finishedRequest("fetchAccts", value))
        console.log(value)
     })
-  //}
+  }
 }
 
 export function fetchRegisteredJobs(){
-  //return function(dispatch){
+  return function(dispatch){
     return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Registered`,{
       headers: {
         Authorization: 'Basic ' + api_fullKey
@@ -79,15 +85,15 @@ export function fetchRegisteredJobs(){
       return response.json()
     })
     .then(function(value){
-       //dispatch(finishedRequest("fetchAccts", value))
+       dispatch(finishedRequest("fetchAccts", value))
        console.log(value)
     })
-  //}
+  }
 }
 
 
 export function fetchStartedJobs(){
-  //return function(dispatch){
+  return function(dispatch){
     return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Started`,{
       headers: {
         Authorization: 'Basic ' + api_fullKey
@@ -97,8 +103,8 @@ export function fetchStartedJobs(){
       return response.json()
     })
     .then(function(value){
-       //dispatch(finishedRequest("fetchAccts", value))
+       dispatch(finishedRequest("fetchAccts", value))
        console.log(value)
     })
-  //}
+  }
 }

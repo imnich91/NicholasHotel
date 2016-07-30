@@ -20,7 +20,7 @@ const Navbar = () =>(
                 <span className = "icon icon-chevron-down"></span>
             </Button>
             <div className = "dropdown-menu" aria-labeledby = "dropdownDemo1">
-              <li><a href="#0">Logout</a></li>
+              <li><a href="/">Logout</a></li>
             </div>
           </div>
         </div>

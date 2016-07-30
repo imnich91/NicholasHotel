@@ -4,7 +4,7 @@ import Label from 'coreui/lib/components/Label';
 import DropdownListInput from 'coreui/lib/components/DropdownListInput';
 import SelectListInput from 'coreui/lib/components/SelectListInput';
 import Modal from 'coreui/lib/components/Modal';
-import { displayAcct3 } from '../Actions';
+import { displayAcct3 } from '../../Actions';
 import {connect} from 'react-redux';
 
 class AcctInfoPg2 extends React.Component{

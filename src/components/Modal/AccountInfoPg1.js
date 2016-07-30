@@ -3,7 +3,7 @@ import Button from 'coreui/lib/components/Button';
 import Label from 'coreui/lib/components/Label';
 import DropdownListInput from 'coreui/lib/components/DropdownListInput';
 import Modal from 'coreui/lib/components/Modal';
-import { displayAcct2 } from '../Actions';
+import { displayAcct2 } from '../../Actions/index';
 import {connect} from 'react-redux';
 import AcctInfoPg2 from './AcctInfoPg2';
 

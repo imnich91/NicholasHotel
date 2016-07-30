@@ -36,6 +36,7 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
+    "recompose": "^0.20.2",
     "redux": "^3.5.2",
     "tapable": "^0.2.4"
   }
