@@ -1,13 +1,6 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import CreateAcct from "../components/CreateAcct";
-import {fetchAPI} from '../Actions';
-import {fetchAccts} from '../Actions';
-import {fetchRegisteredJobs} from '../Actions';
-import {fetchStartedJobs} from '../Actions';
-import {fetchSchedule} from '../Actions';
-
-
 
 class Card extends React.Component {
   constructor(props) {
@@ -23,14 +16,11 @@ class Card extends React.Component {
 
   setCard = function(){
     if(this.props.cardType === "Accounts"){
-      visible: "makeVis"
       return "icon icon-account icon-account-card"
     } else{
-      visible: "hideVis"
       return "icon icon-queue-settings"
     }
   }
-
 
   render(){
     return(
@@ -43,7 +33,7 @@ class Card extends React.Component {
                 <span className= {this.state.icon}></span>
               </div>
               <div className = "col-xs-6">
-                  <span className = "card-numbers">81</span>
+                  <span className = "card-numbers">{this.state.cardType === 'Accounts' ? this.props.accounts.accounts.length : this.props.jobInfo.jobs.length}</span>
                   <span className = {this.state.cardType}>{this.state.cardType}</span>
                   <span className = {this.state.label}>{this.state.status}</span>
               </div>
@@ -55,7 +45,7 @@ class Card extends React.Component {
                 <CreateAcct style = "btn-link account-button" visible = {this.state.visible}/>
               </div>
               <div className = "col-xs-6 details-button">
-                <Button className="btn-link details-button" onClick = { fetchSchedule }>
+                <Button className="btn-link details-button">
                   Details
                   <span className="icon icon-chevron-right"></span>
                 </Button>

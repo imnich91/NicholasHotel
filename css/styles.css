@@ -22,8 +22,8 @@
   }
   .off-canvas-open{
     display:block !important;
-
   }
+
   .app{
     margin-left: 0px !important;
   }
@@ -102,16 +102,20 @@ body{
   padding-top: 5px;
 }
 
-
 .dashboard-header{
-    color: #7b7a7a;
-    border-style: solid;
-    border-color: #f7f5f4;
-    border-width: 0px 0px 2px 0px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    font-weight: 500;
+  color: #7b7a7a;
+  border-style: solid;
+  border-color: #f7f5f4;
+  border-width: 0px 0px 2px 0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-weight: 500;
+}
 
+.database-input{
+  border-style: none !important;
+  margin-left: 30px !important;
+  margin-bottom: 20px !important;
 }
 
 .default-dropdown{
@@ -290,11 +294,6 @@ body{
   width: 0px;
   padding: 0px;
 }
-
-.pad-dropdown{
-
-}
-
 .page-wrapper{
   margin: 0px 250px 0px 250px;
   background-color: white;

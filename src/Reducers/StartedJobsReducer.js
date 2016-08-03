@@ -1,15 +1,15 @@
 import {
-  FETCH_ACCTS
+  FETCH_STARTED_JOBS
 } from '../Actions';
 
 const initialAccount = {
-  accounts: [0],
+  jobs: [0],
   success: false
 }
 
-export const AccountsReducer = (state = initialAccount, action) => {
+export const StartedJobsReducer = (state = initialAccount, action) => {
   switch(action.type) {
-    case FETCH_ACCTS:
+    case FETCH_STARTED_JOBS:
     return action.payload
   }
   return state;

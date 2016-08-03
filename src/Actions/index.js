@@ -3,6 +3,11 @@ export const ACCT_2 = 'ACCT_2';
 export const ACCT_3 = 'ACCT_3';
 export const ACCT_4 = 'ACCT_4';
 export const CHANGE_AUTH = 'CHANGE_AUTH';
+export const FETCH_ACCTS = 'FETCH_ACCTS';
+export const FETCH_REG_JOBS = 'FETCH_REG_JOBS';
+export const FETCH_STARTED_JOBS = 'FETCH_STARTED_JOBS';
+export const SETUP_ACCT = 'SETUP_ACCT';
+
 
 
 const api_key = "c395f0d1";
@@ -34,6 +39,15 @@ export const authenticate = (isLoggedIn) => ({
   payload: isLoggedIn
 })
 
+const acctSetupd = (acct) => {
+
+}
+
+export const setupAcct = (acct) => ({
+  type: SETUP_ACCT,
+  payload: acctSetup(acct)
+})
+
 export const finishedRequest = (actionType,response) => ({
     type: actionType,
     payload: response
@@ -51,7 +65,39 @@ export function fetchAccts(){
       return response.json()
     })
     .then(function(value){
-       dispatch(finishedRequest("fetchAccts", value))
+       dispatch(finishedRequest(FETCH_ACCTS, value))
+    })
+  }
+}
+
+export function fetchRegJobs(){
+  return function(dispatch){
+    return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Registered`,{
+      headers: {
+        Authorization: 'Basic ' + api_fullKey
+      }
+    })
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(value){
+       dispatch(finishedRequest(FETCH_REG_JOBS, value))
+    })
+  }
+}
+
+export function fetchStartedJobs(){
+  return function(dispatch){
+    return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Started`,{
+      headers: {
+        Authorization: 'Basic ' + api_fullKey
+      }
+    })
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(value){
+       dispatch(finishedRequest(FETCH_STARTED_JOBS, value))
     })
   }
 }
@@ -68,43 +114,7 @@ export function fetchSchedule(){
       return response.json()
     })
     .then(function(value){
-       dispatch(finishedRequest("fetchAccts", value))
-       console.log(value)
-    })
-  }
-}
-
-export function fetchRegisteredJobs(){
-  return function(dispatch){
-    return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Registered`,{
-      headers: {
-        Authorization: 'Basic ' + api_fullKey
-      }
-    })
-    .then(function(response){
-      return response.json()
-    })
-    .then(function(value){
-       dispatch(finishedRequest("fetchAccts", value))
-       console.log(value)
-    })
-  }
-}
-
-
-export function fetchStartedJobs(){
-  return function(dispatch){
-    return fetch(`http://admin-cluster-restapi-lb-797006272.us-west-2.elb.amazonaws.com/v1/job/?region=us-west-2&status=Started`,{
-      headers: {
-        Authorization: 'Basic ' + api_fullKey
-      }
-    })
-    .then(function(response){
-      return response.json()
-    })
-    .then(function(value){
-       dispatch(finishedRequest("fetchAccts", value))
-       console.log(value)
+       dispatch(finishedRequest("fetchSchedule", value))
     })
   }
 }
