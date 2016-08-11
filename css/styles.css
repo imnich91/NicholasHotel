@@ -47,13 +47,48 @@
 
 .app {
   min-height: 970px;
-  margin: 0px 0px 0px 250px;
-  padding: 0px 30px;
+  margin: 0px 0px 0px 100px;
+  padding: 0px 150px;
   background-color: white;
 }
 
 .card-width{
   width: 0px;
+}
+
+.acct-trash-button-style{
+  margin-top: 15px !important;
+  vertical-align: middle;
+  float: right;
+}
+
+.acct-bottom-border{
+  border-style: solid;
+  border-color: #f7f5f4;
+  border-width: 0px 0px 2px 0px;
+  padding: 0px;
+}
+
+.schedule-bottom-border{
+  border-style: solid;
+  border-color: #f7f5f4;
+  border-width: 0px 0px 2px 0px;
+  padding: 0px;
+}
+
+.acct-page-button{
+  margin-bottom: 15px;
+  margin-top: 25px;
+  vertical-align: middle;
+  float: right;
+}
+
+.accounts-header{
+  color: #7b7a7a;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  font-weight: 500;
+  float: left;
 }
 
 .Accounts{
@@ -69,7 +104,7 @@
 .account-button {
   float:left;
   vertical-align: middle;
-  padding: 0px;
+  padding: 2px 0px 0px 0px;
 }
 
 body{
@@ -102,13 +137,17 @@ body{
   padding-top: 5px;
 }
 
+.col-no-pad{
+  padding: 0px;
+}
+
 .dashboard-header{
   color: #7b7a7a;
   border-style: solid;
   border-color: #f7f5f4;
   border-width: 0px 0px 2px 0px;
   padding-bottom: 15px;
-  padding-top: 15px;
+  padding-top: 20px;
   font-weight: 500;
 }
 
@@ -121,6 +160,7 @@ body{
 .default-dropdown{
   float:right;
   font-size: 30px;
+  color: white;
 }
 
 .details-button{
@@ -152,13 +192,13 @@ body{
   display: none;
 }
 
-.icon-chevron-down{
+.icon-chevron-down-default{
   padding-top: 5px;
   float:right;
   font-size: 20px;
 }
 
-.icon-account-card{
+.icon-card-default{
   font-size: 60px;
   color: white;
   padding-left: 10px;
@@ -180,14 +220,6 @@ body{
   vertical-align: middle;
 }
 
-.icon-queue-settings{
-  font-size: 60px;
-  color: white;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  height: 80px;
-}
-
 .Jobs{
   color: white;
   height: 1px;
@@ -198,6 +230,20 @@ body{
   margin-top: 12px;
 }
 
+.jobs-bottom-border{
+  border-style: solid;
+  border-color: #f7f5f4;
+  border-width: 0px 0px 2px 0px;
+  padding: 0px;
+}
+
+.jobs-header{
+  color: #7b7a7a;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  font-weight: 500;
+  float: left;
+}
 
 .logout{
   color: yellow;
@@ -235,18 +281,22 @@ body{
 
 .nav-menu-icon{
   margin-top: 10px;
-  color: #2975e9;
+  color: white;
   font-size: 30px;
 }
 
 .navbar{
   z-index: 1000;
   min-width: 50px;
-  background-color: #f7f5f4;
   height: 50px;
   border-style: solid;
   border-width: 0px 0px 2px 0px;
-  border-color: #e7e7e7;
+  border-color:  #2975e9;
+}
+
+.nav-icon-style{
+  font-size: 20px !important;
+  text-align: center !important;
 }
 
 .nav-sidebar{
@@ -263,25 +313,21 @@ body{
 .nav-header{
   margin-left: 15px;
   float: left;
-  color: #7b7a7a;
+  color: white;
   font-size: 25px;
   vertical-align: middle;
   margin-top: 7px;
 }
 
-.navbar-vertical-link-title.active{
-  color:#3ed6cf;
-}
-
 .navbar-vertical-link-title{
   font-size: 15px;
-  color: #2975e9;
+  text-align: center;
 }
 
 .navbar-vertical{
   overflow: hidden;
   margin-top: 50px;
-  width: 250px;
+  width: 100px;
 }
 
 .nav-row{
@@ -299,6 +345,24 @@ body{
   background-color: white;
 }
 
+.pad-dlt-msg{
+  margin-left:25px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+
+.pad-dropdown{
+  float: right;
+}
+
+.pager-prev{
+  float: left;
+}
+
+.pager-next{
+  float: right;
+}
+
 .path-style{
   fill: #2975e9;
   opacity: .5;
@@ -312,29 +376,49 @@ body{
   margin-right: 5px !important;
 }
 
+.reg-job-style{
+  color: #7b7a7a;
+  margin-top: 15px;
+}
+
+.Schedules{
+  color: white;
+  height: 1px;
+  font-size: 15px;
+  float: right;
+  clear: right;
+  padding-right: 20px;
+  margin-top: 12px;
+}
+
+.search-style-accounts{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.search-style-jobs{
+  display: inline-block;
+  margin-top: 8px;
+}
+
 .select-data-size{
   border-style: none !important;
   max-height: 120px;
 }
 
-.status-label{
-  font-size: 12px;
-  float:right;
-  clear:right;
-  background-color: #072249;
-  color: white;
-  margin-top: 18px;
-  height: 19px;
-  margin-bottom: -20px;
-  width: 100px;
-  text-align: center;
-  padding-top: 2px;
+.table-pad{
+  padding-top: 20px;
+  display: block;
 }
 
 .text-bottom{
   vertical-align: bottom;
 }
 
+.icon-danger-style {
+  margin-right: 10px;
+  color: red;
+}
 #hideVis{
   visibility: hidden;
 }

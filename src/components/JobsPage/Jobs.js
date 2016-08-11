@@ -2,6 +2,7 @@ import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import TextInput from 'coreui/lib/components/TextInput';
 import Table from 'coreui/lib/components/Table';
+import RegisteredJobs from './RegisteredJobs/RegisteredJobs';
 
 class Jobs extends React.Component{
   constructor(props){
@@ -17,6 +18,7 @@ class Jobs extends React.Component{
           </h1>
         </div>
       </div>
+      <RegisteredJobs/>
     </div>
   )
 

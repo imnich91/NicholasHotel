@@ -6,7 +6,11 @@ export const CHANGE_AUTH = 'CHANGE_AUTH';
 export const FETCH_ACCTS = 'FETCH_ACCTS';
 export const FETCH_REG_JOBS = 'FETCH_REG_JOBS';
 export const FETCH_STARTED_JOBS = 'FETCH_STARTED_JOBS';
-export const SETUP_ACCT = 'SETUP_ACCT';
+export const FETCH_SCHEDULED_JOBS = 'FETCH_SCHEDULED_JOBS';
+export const SETUP_ACCT_ONE = 'SETUP_ACCT_ONE';
+export const SETUP_ACCT_TWO = 'SETUP_ACCT_TWO';
+export const DLT_MODAL = 'DLT_MODAL';
+
 
 
 
@@ -39,13 +43,40 @@ export const authenticate = (isLoggedIn) => ({
   payload: isLoggedIn
 })
 
-const acctSetupd = (acct) => {
+export const displayDltAcct = (state) => ({
+  type: DLT_MODAL,
+  payload: !state
+});
 
+const prepareAccountOne = (acct) => {
+  return {
+    acctName: acct.acctName,
+    acctEmail: "",
+    acctNumber: acct.acctNumber,
+    region: acct.region,
+    environment: acct.environment,
+  }
 }
 
-export const setupAcct = (acct) => ({
-  type: SETUP_ACCT,
-  payload: acctSetup(acct)
+const prepareAccountTwo = (acct) => {
+  return{
+    databaseProduct: acct.databaseProduct,
+    databaseType: acct.databaseType,
+    sqlIP: acct.sqlIP,
+    sqlPort: acct.sqlPort,
+    databaseUsername: acct.databaseUsername,
+    databasePassword: acct.databasePassword
+  }
+}
+
+export const setupAcctOne = (acct) => ({
+  type: SETUP_ACCT_ONE,
+  payload: prepareAccountOne(acct)
+})
+
+export const setupAcctTwo = (acct) => ({
+  type: SETUP_ACCT_TWO,
+  payload: prepareAccountTwo(acct)
 })
 
 export const finishedRequest = (actionType,response) => ({
@@ -114,7 +145,7 @@ export function fetchSchedule(){
       return response.json()
     })
     .then(function(value){
-       dispatch(finishedRequest("fetchSchedule", value))
+       dispatch(finishedRequest(FETCH_SCHEDULED_JOBS, value))
     })
   }
 }

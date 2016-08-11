@@ -23,4 +23,4 @@ LoginContainer.contextTypes = {router: React.PropTypes.object}
 
 const mapStateToProps = (state) => ({authenticated: state.authenticated})
 
-export default connect(mapStateToProps, {authenticate})(LoginContainer);
+export default connect(mapStateToProps, {authenticate})(LoginContainer)

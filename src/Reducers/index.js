@@ -7,6 +7,9 @@ import {AuthReducer} from './AuthReducer';
 import {AccountsReducer} from './AccountsReducer';
 import {RegJobsReducer} from './RegJobsReducer';
 import {StartedJobsReducer} from './StartedJobsReducer';
+import {AcctSetupReducer} from './AcctSetupReducer';
+import {ScheduleReducer} from './ScheduleReducer';
+import {DltAcctModalRed} from './DltAcctModalRed';
 
 const rootReducer = combineReducers({
   modalState1: modalP1Reducer,
@@ -16,7 +19,10 @@ const rootReducer = combineReducers({
   authenticated: AuthReducer,
   accountsInfo: AccountsReducer,
   regJobsInfo: RegJobsReducer,
-  startedJobsInfo: StartedJobsReducer
+  startedJobsInfo: StartedJobsReducer,
+  acctSetup: AcctSetupReducer,
+  scheduleInfo: ScheduleReducer,
+  dltAcctModalState: DltAcctModalRed
 });
 
 export default rootReducer;

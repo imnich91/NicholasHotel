@@ -1,5 +1,6 @@
 import {
-  SETUP_ACCT
+  SETUP_ACCT_ONE,
+  SETUP_ACCT_TWO
 } from '../Actions';
 
 const initialAccount = {
@@ -16,10 +17,12 @@ const initialAccount = {
   databasePassword: ""
 }
 
-export const AccountsReducer = (state = initialAccount, action) => {
+export const AcctSetupReducer = (state = initialAccount, action) => {
   switch(action.type) {
-    case SETUP_ACCT:
-    return action.payload
+    case SETUP_ACCT_ONE:
+    return {...state, ...action.payload}
+    case SETUP_ACCT_TWO:
+    return {...state, ...action.payload}
   }
   return state;
 }

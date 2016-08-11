@@ -11,6 +11,7 @@ class AcctSuccess extends React.Component{
   }
 
   toggleModals = () =>(
+    console.log(this.props),
     this.props.action(this.props.data),
     this.props.displayAcct4(this.props.modalState4)
   )
@@ -41,6 +42,6 @@ class AcctSuccess extends React.Component{
     </Modal>
   )
 }
-  const mapStateToProps = (state) => ({modalState4: state.modalState4});
+  const mapStateToProps = (state) => ({modalState4: state.modalState4, acctSetup: state.acctSetup});
 
   export default connect(mapStateToProps, {displayAcct4})(AcctSuccess)

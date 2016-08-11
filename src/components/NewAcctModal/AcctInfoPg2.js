@@ -6,6 +6,7 @@ import SelectListInput from 'coreui/lib/components/SelectListInput';
 import Form, { Field, Message } from 'coreui/lib/components/Form';
 import Modal from 'coreui/lib/components/Modal';
 import { displayAcct3 } from '../../Actions';
+import {setupAcctTwo} from '../../Actions';
 import {connect} from 'react-redux';
 import yup from 'yup';
 
@@ -26,7 +27,8 @@ class AcctInfoPg2 extends React.Component{
     super(props);
   }
 
-  toggleModals = () =>(
+  toggleModals = (value) =>(
+    this.props.setupAcctTwo(value),
     this.props.action(this.props.data),
     this.props.displayAcct3(this.props.modalState3)
   )
@@ -43,7 +45,7 @@ class AcctInfoPg2 extends React.Component{
         </div>
         <Form {...{schema}}
               defaultValue = {schema.default()}
-              onSubmit ={(value) =>console.log(value)}>
+              onSubmit ={(value) =>this.toggleModals(value)}>
           <div className = "modal-side-pad" id = "ModalOne">
             <div className = "row">
               <div className = "col-xs-12 col-sm-6 col-lg-6 modal-body-pad">
@@ -128,4 +130,4 @@ class AcctInfoPg2 extends React.Component{
 
 const mapStateToProps = (state) => ({modalState3: state.modalState3});
 
-export default connect(mapStateToProps, {displayAcct3})(AcctInfoPg2)
+export default connect(mapStateToProps, {displayAcct3, setupAcctTwo})(AcctInfoPg2)

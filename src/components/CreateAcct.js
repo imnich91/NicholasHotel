@@ -1,13 +1,11 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import Label from 'coreui/lib/components/Label';
-import SelectListInput from 'coreui/lib/components/SelectListInput';
-import DropdownListInput from 'coreui/lib/components/DropdownListInput';
 import {connect} from 'react-redux';
-import AccountInfoPg1 from './Modal/AccountInfoPg1';
-import AcctInfoPg2 from './Modal/AcctInfoPg2';
-import AcctSuccess from './Modal/AcctSuccess';
-import ProvisionModal from './Modal/ProvisionModal';
+import AccountInfoPg1 from './NewAcctModal/AccountInfoPg1';
+import AcctInfoPg2 from './NewAcctModal/AcctInfoPg2';
+import AcctSuccess from './NewAcctModal/AcctSuccess';
+import ProvisionModal from './NewAcctModal/ProvisionModal';
 import { displayAcct1 } from '../Actions';
 import { displayAcct2 } from '../Actions';
 import { displayAcct3 } from '../Actions';
@@ -41,7 +39,10 @@ class CreateAcct extends React.Component {
 
   render = () => (
     <div>
-      <Button className="btn-link account-button" id = {this.state.visible} onClick = {() => this.props.displayAcct1(this.props.modalState1)}>
+      <Button
+        className= {this.state.style}
+        id = {this.state.visible}
+        onClick = {() => this.props.displayAcct1(this.props.modalState1)}>
         <span className="icon icon-plus"></span>
         New Account
       </Button>

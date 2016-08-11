@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
-import MenuItems from '../components/MenuItems';
+import MenuItems from './MenuItems';
 
 
 const Navbar = () =>(
   <div>
-    <nav className = "navbar">
+    <nav className = "navbar navbar-primary">
       <div className = "row nav-row">
         <Button className="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
           <span className="icon icon-menu nav-menu-icon"></span>
@@ -17,7 +17,7 @@ const Navbar = () =>(
           <div className = "dropdown float-left pad-dropdown">
             <Button className = "dropdown-toggle default-dropdown pad-dropdown" type="button" id="dropdownDemo1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span className = "icon icon-user "></span>
-                <span className = "icon icon-chevron-down"></span>
+                <span className = "icon icon-chevron-down icon-chevron-down-default"></span>
             </Button>
             <div className = "dropdown-menu" aria-labeledby = "dropdownDemo1">
               <li><a href="/">Logout</a></li>

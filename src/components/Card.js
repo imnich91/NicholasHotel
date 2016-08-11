@@ -1,24 +1,31 @@
 import React from 'react';
 import Button from 'coreui/lib/components/Button';
 import CreateAcct from "../components/CreateAcct";
+import { Link } from 'react-router';
 
 class Card extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: props.status,
       cardType: props.cardType,
-      label: props.label,
       visible: props.acctVisible,
       icon: this.setCard()
     };
   }
 
   setCard = function(){
-    if(this.props.cardType === "Accounts"){
-      return "icon icon-account icon-account-card"
-    } else{
-      return "icon icon-queue-settings"
+    switch(this.props.cardType) {
+      case "Accounts": return "icon icon-account icon-card-default"
+      case "Jobs": return "icon icon-queue-settings icon-card-default"
+      case "Schedules": return "icon icon-clock icon-card-default"
+    }
+  }
+
+  getRoute = function(){
+    switch(this.props.cardType) {
+      case "Accounts": return 'accounts'
+      case "Jobs": return 'jobs'
+      case "Schedules": return 'schedule'
     }
   }
 
@@ -29,13 +36,19 @@ class Card extends React.Component {
           <div className="card-block">
             <div className = "row">
               <div className = "col-xs-6">
-
                 <span className= {this.state.icon}></span>
               </div>
               <div className = "col-xs-6">
-                  <span className = "card-numbers">{this.state.cardType === 'Accounts' ? this.props.accounts.accounts.length : this.props.jobInfo.jobs.length}</span>
+                  <span className = "card-numbers">
+                    {(() => {
+                      switch(this.state.cardType) {
+                        case 'Accounts': return this.props.accounts.accounts.length;
+                        case 'Jobs': return this.props.jobInfo.jobs.length;
+                        case 'Schedules': return this.props.scheduleInfo.schedules.length;
+                      }
+                    })()}
+                    </span>
                   <span className = {this.state.cardType}>{this.state.cardType}</span>
-                  <span className = {this.state.label}>{this.state.status}</span>
               </div>
             </div>
           </div>
@@ -45,10 +58,10 @@ class Card extends React.Component {
                 <CreateAcct style = "btn-link account-button" visible = {this.state.visible}/>
               </div>
               <div className = "col-xs-6 details-button">
-                <Button className="btn-link details-button">
+                <Link className="btn-link details-button" activeClassName = 'active' to={this.getRoute()}>
                   Details
                   <span className="icon icon-chevron-right"></span>
-                </Button>
+                </Link>
               </div>
             </div>
           </div>
