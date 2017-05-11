@@ -17,13 +17,7 @@ const Overview = (children) => (
   </div>
 );
 
-const Login = (children) => (
-  <div>
-    {children}
-  </div>
-)
-
-const App = ({children, authenticated}) => authenticated ? Overview(children) : Login(children)
+const App = ({children, authenticated}) => Overview(children)
 
 const mapStateToProps = (state) => ({authenticated: state.authenticated})
 

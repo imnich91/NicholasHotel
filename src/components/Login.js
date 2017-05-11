@@ -1,7 +1,7 @@
 import React from 'react';
-import Form, { Field, Message } from 'coreui/lib/components/Form';
-import Button from 'coreui/lib/components/Button';
-import Label from 'coreui/lib/components/Label';
+// import Form, { Field, Message } from 'coreui/lib/components/Form';
+// import Button from 'coreui/lib/components/Button';
+// import Label from 'coreui/lib/components/Label';
 import yup from 'yup';
 
 const defaultRequiredStr = yup.string().default('').required('This field is required');

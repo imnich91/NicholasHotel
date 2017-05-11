@@ -1,28 +1,15 @@
 import React from 'react';
-import Button from 'coreui/lib/components/Button';
+//import Button from 'coreui/lib/components/Button';
+import Button from 'react-bootstrap/lib/Button';
 import MenuItems from './MenuItems';
 
 
 const Navbar = () =>(
   <div>
     <nav className = "navbar navbar-primary">
-      <div className = "row nav-row">
-        <Button className="off-canvas-open" data-toggle="off-canvas" data-target="#off-canvas-demo">
-          <span className="icon icon-menu nav-menu-icon"></span>
-        </Button>
+      <div className = "row nav-row">        
         <div className = "col-xs-6 col-sm-6 col-md-9 col-lg-9">
-          <div className = "nav-header">Forte Admin</div>
-        </div>
-        <div className = "col-xs-0 col-md-3 col-lg-3 pad-dropdown">
-          <div className = "dropdown float-left pad-dropdown">
-            <Button className = "dropdown-toggle default-dropdown pad-dropdown" type="button" id="dropdownDemo1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span className = "icon icon-user "></span>
-                <span className = "icon icon-chevron-down icon-chevron-down-default"></span>
-            </Button>
-            <div className = "dropdown-menu" aria-labeledby = "dropdownDemo1">
-              <li><a href="/">Logout</a></li>
-            </div>
-          </div>
+          <div className = "nav-header">Nicholas Motel</div>
         </div>
       </div>
     </nav>
