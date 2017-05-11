@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 //import LoginContainer from './Containers/LoginContainer';
 import Dashboard from './Containers/Dashboard';
-import Availability from './components/Availability';
 // import AccountsContainer from './Containers/AccountsContainer';
 // import Jobs from './components/JobsPage/Jobs';
 // import Schedule from './components/Schedule';
@@ -16,7 +15,6 @@ import Availability from './components/Availability';
 const Routes = (
   <Route path="/" component={Overview}>
     <IndexRoute component={Dashboard} />
-    // <Route path="availability" component={Availability} />
     <Route path="dashboard" component={Dashboard} />
   </Route>
 )
