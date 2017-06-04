@@ -5,17 +5,18 @@ import { Router, browserHistory } from 'react-router';
 //import LoginContainer from './Containers/LoginContainer';
 import Dashboard from './Containers/Dashboard';
 // import AccountsContainer from './Containers/AccountsContainer';
-// import Jobs from './components/JobsPage/Jobs';
+ import RoomContainer from './Containers/RoomContainer';
 // import Schedule from './components/Schedule';
- import Overview from './Containers/App';
+ import App from './Containers/App';
 // import SingleAccount from './components/AccountsPage/SingleAccount';
 // import requireAuth from './Containers/Authentication';
 // import {acctData} from './components/AccountsPage/AccountsTable';
 
 const Routes = (
-  <Route path="/" component={Overview}>
+  <Route path="/" component={App}>
     <IndexRoute component={Dashboard} />
     <Route path="dashboard" component={Dashboard} />
+    <Route path="room" component={RoomContainer}/>
   </Route>
 )
 

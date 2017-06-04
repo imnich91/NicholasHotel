@@ -6,10 +6,10 @@ import MenuItems from './MenuItems';
 
 const Navbar = () =>(
   <div>
-    <nav className = "navbar navbar-primary">
-      <div className = "row nav-row">        
+    <nav className = "navbar">
+      <div className = "row nav-row">
         <div className = "col-xs-6 col-sm-6 col-md-9 col-lg-9">
-          <div className = "nav-header">Nicholas Motel</div>
+          <div className = "nav-header">Nicholas Hotel</div>
         </div>
       </div>
     </nav>

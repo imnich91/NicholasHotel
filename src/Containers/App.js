@@ -4,6 +4,9 @@ import Moment from 'moment';
 import momentLocalizer from 'react-widgets/lib/localizers/moment';
 import numberLocalizer from 'react-widgets/lib/localizers/simple-number';
 import { connect } from 'react-redux';
+import {displayDltAcct} from '../Actions';
+import MyCalendar from '../components/MyCalendar';
+
 
 numberLocalizer();
 momentLocalizer(Moment);
@@ -12,7 +15,8 @@ const Overview = (children) => (
   <div className = "wrapper">
     <Navbar/>
     <div className="app">
-        {children}
+      {children}
+      <MyCalendar/>
     </div>
   </div>
 );

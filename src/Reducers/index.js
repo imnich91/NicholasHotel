@@ -1,9 +1,15 @@
 import { combineReducers } from 'redux';
-import {AuthReducer} from './AuthReducer';
+import {RegistrationReducer} from './RegistrationReducer';
+import {DateReducer} from './DateReducer';
+import {RegReducer} from './RegReducer';
+import {RoomsReducer} from './RoomsReducer'
 
 
 const rootReducer = combineReducers({
-  authenticated: AuthReducer
+  registrationModalState: RegistrationReducer,
+  dateState: DateReducer,
+  regState: RegReducer,
+  roomsState: RoomsReducer
 });
 
 export default rootReducer;
