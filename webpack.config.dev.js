@@ -13,7 +13,7 @@ module.exports = Object.assign(R.omit(['shared'], commonConfig), {
   output: {
     filename: 'bundle.js',
     path: commonConfig.shared.output.path,
-    publicPath: 'http://imnich91.github.io/',
+    publicPath: 'http://imnich91.github.io/NicholasHotel/',
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 });
